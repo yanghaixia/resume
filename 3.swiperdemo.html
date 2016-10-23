@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="./swiper/css/swiper.min.css"/>
+    <link rel="stylesheet" href="./swiper/css/reset.min.css"/>
+    <link rel="stylesheet" href="./swiper/css/animate.css"/>
+    <link rel="stylesheet" href="indexswiper.css"/>
+    <title></title>
+    <script>
+        var desw = 640;
+        var winW = document.documentElement.clientWidth;
+        var desWfontSize = 100;
+        document.documentElement.style.fontSize = winW / desw * 100 + 'px';
+    </script>
+</head>
+<body>
+<div id="main">
+    <div class="music">
+        <audio src="./swiper/audio/beyond.mp3" loop preload="none" id="beyond"></audio>
+        <!--preload:
+                 none:不预加载音频
+                 metadata：只加载元数据（音频的长度）
+                 auto：-->
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <img src="swiper/img/swiper/page1-text1.png" alt=""/>
+                <img src="swiper/img/swiper/page1-text2.png" alt=""/>
+                <img src="swiper/img/swiper/page1-text3.png" alt=""/>
+                <img src="swiper/img/swiper/page1-text4.png" alt=""/>
+            </div>
+            <div class="swiper-slide slide2">
+                <img src="swiper/img/swiper/page2-text1.png" alt=""/>
+                <img src="swiper/img/swiper/page2-text2.png" alt=""/>
+                <img src="swiper/img/swiper/page2-text3.png" alt=""/>
+                <img src="swiper/img/swiper/page2-text4.png" alt=""/>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+<script src="swiper/js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        loop: true,//循环模式
+        onSlideChangeEnd: function (swiper) {
+            var slides = swiper.slides;//获得所有的滑块
+            var curIndex = swiper.activeIndex;//当前滑块的索引
+            var trueSlideNum = slides.length - 2;//真实的滑块的个数
+            var lastSlideNum = slides.length + 1;
+            [].forEach.call(slides, function (item, index) {
+                item.id = '';//把所有的滑块Id名去掉
+                if (index == curIndex) {
+                    switch (index) {
+                        case 0:/*第一个滑块是真实的最后一个滑块的副本*/
+                            item.id = 'page' + trueSlideNum;
+                            break;
+                        case lastSlideNum:/*最后一个滑块是真实的第一个滑块*/
+                            item.id = 'page1';
+                            break;
+                        default :
+                            item.id = 'page' + curIndex;
+                    }
+                }
+            })
+
+        },
+        onInit: function (swiper) {
+            //初始化完成后给第一个滑块增加动画效果
+            /*var slides=swiper.slides;
+             slides[0].id='page1'*/
+        }
+    });
+    var beyond = document.querySelector('#beyond');
+    var music = document.querySelector('.music');
+    window.setTimeout(function () {
+        beyond.play();
+        beyond.addEventListener('canplay', function () {
+            music.className = 'music musicMove';
+            music.style.opacity = 1;
+        });
+    }, 1000);
+    music.addEventListener('click', function () {
+        if (beyond.paused) {
+            beyond.play();
+            music.className = 'music musicMove';
+        } else {
+              beyond.pause();
+            music.className = 'music';
+        }
+    })
+</script>
