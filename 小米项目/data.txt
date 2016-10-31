@@ -1,0 +1,6 @@
+[
+{"src":"./images/1.jpg","title":"把握未来"},
+{"src":"./images/2.jpg","title":"把握未来"},
+{"src":"./images/3.jpg","title":"把握未来"},
+{"src":"./images/4.jpg","title":"把握未来"}
+]

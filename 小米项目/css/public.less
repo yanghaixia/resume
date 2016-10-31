@@ -1,0 +1,13 @@
+@body-with:1366;
+@color-bg:#f5f5f5;
+@color-white:#ffffff;
+@color-body:#ff6700;
+@color-black:#000;
+
+.transition(@property:all, @duration:1s, @time-function:linear,@delay:0s){
+  -webkit-transition:@arguments;
+  -moz-transition:@arguments;
+  -ms-transition: @arguments;
+  -o-transition:@arguments;
+  transition:@arguments;
+}
