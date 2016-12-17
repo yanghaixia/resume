@@ -76,7 +76,7 @@ body {
 
 /*--LOADING--*/
 .loading {
-    background: url("../img/first.png") no-repeat center center;
+    background: url("../img/first.jpg") no-repeat center center;
     background-size: cover;
 }
 
@@ -123,11 +123,9 @@ body {
     height: 100%;
     border-radius: .06rem;
 
-  /*  background: -webkit-linear-gradient(45deg, #fe4237 25%, #ff8f5f 25%, #ff8f5f 50%, #fe4237 50%, #fe4237 75%, #ff8f5f 75%);
-    background: linear-gradient(45deg, #fe4237 25%, #ff8f5f 25%, #ff8f5f 50%, #fe4237 50%, #fe4237 75%, #ff8f5f 75%);*/
-    background: -webkit-linear-gradient(45deg, #affe10 25%, #d1ff0a 25%, #d1ff0a 50%, #affe10 50%, #affe10 75%,  #d1ff0a  75%);
-    background: linear-gradient(45deg, #affe10 25%, #d1ff0a 25%, #d1ff0a 50%, #affe10 50%, #affe10 75%,  #d1ff0a  75%);
-    background-size: .5rem .5rem;
+    background: -webkit-linear-gradient(45deg, #5CB85C 25%, #74C274 25%, #74C274 50%, #5CB85C 50%, #5CB85C 75%, #74C274 75%);
+    background: linear-gradient(45deg, #5CB85C 25%, #74C274 25%, #74C274 50%, #5CB85C 50%, #5CB85C 75%, #74C274 75%);
+    background-size: .3rem .3rem;
 
     -webkit-animation: loadingMove 1s linear infinite both;
     animation: loadingMove 1s linear infinite both;
@@ -305,7 +303,7 @@ body {
 
 /*个人简介*/
 .page1 {
-    background: url("../img/myself.jpg") no-repeat center center;
+    background: url("../img/bg2.jpeg") no-repeat center center;
     background-size: 100% 100%;
 }
 
@@ -556,7 +554,7 @@ body {
 
 /*自我评价*/
 .page4 {
-    background: url("../img/bg3.png") no-repeat center center;
+    background: url("../img/bg4.png") no-repeat center center;
     background-size: 100% 100%;
 }
 
@@ -617,7 +615,6 @@ body {
 
 .page5 p {
     position: absolute;
-    margin-top: 3rem;
     top: .57rem;
     left: .64rem;
     width: 5.5rem;
@@ -627,6 +624,7 @@ body {
     font-family: "microsoft yahei";
     font-size: .35rem;
     opacity: 0;
+    margin-top: 3rem;
 }
 
 .page5 p span {
@@ -638,15 +636,6 @@ body {
     width: 5.5rem;
 }
 
-.page5 p:nth-child(3) {
-    top: 4rem;
-    width: 5.5rem;
-}
-
-.page5 p:nth-child(4) {
-    top: 6rem;
-    width: 5.5rem;
-}
 
 #page5 p:nth-child(1) {
     -webkit-animation: bounceInLeft 1s both;
@@ -658,21 +647,12 @@ body {
     animation: bounceInLeft 1s 0.2s both;
 }
 
-#page5 p:nth-child(3) {
-    -webkit-animation: bounceInLeft 1s 0.4s both;
-    animation: bounceInLeft 1s 0.4s both;
-}
 
-#page5 p:nth-child(4) {
-    -webkit-animation: bounceInLeft 1s 0.6s both;
-    animation: bounceInLeft 1s 0.6s both;
-}
 
 /*兴趣爱好*/
 .page6 {
     background: url("../img/live.png") no-repeat center center;
     background-size: cover;
-
 }
 
 .page6 h2 {
@@ -696,38 +676,98 @@ body {
     font-size: .55rem;
 }
 
-.page6 .textCon {
+.page6 .concat {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    margin-left: -3rem;
+    width: 5rem;
+
+}
+.page6 .concat li{
+    opacity: 0;
+}
+.page6 .concat span{
+    transform:rotate(-72deg);
+    -ms-transform:rotate(-72deg);
+    -moz-transform:rotate(-72deg);
+    -webkit-transform:rotate(-72deg);
+    -o-transform:rotate(-72deg);
+    line-height: 1.5rem;
+    font-size: 0.36rem;
+    display: inline-block;
+
+
+}
+.page6 .concat div{
+    width: 1.5rem;
+    height: 1.5rem;
+    transform:rotate(72deg);
+    -ms-transform:rotate(72deg);
+    -moz-transform:rotate(72deg);
+    -webkit-transform:rotate(72deg);
+    -o-transform:rotate(72deg);
+
+
+}
+.page6 .concat .textCon {
+    float: right;
     padding: .2rem;
-    width: 3.18rem;
-    height: 1.8rem;
     background: rgba(255, 255, 255, 0.8);
     color: rgb(0, 0, 0);
     font-size: .24rem;
-    margin-top: 3.18rem;
-    margin-left: 1.2rem;
+    margin-top: .58rem;
+
+
 }
 
-
-.page6 .textCon span {
-    display: inline-block;
-    min-width: .7rem;
-    font-size: .3rem;
-    vertical-align: bottom;
+.page6 .concat .textCon1 {
+    float: right;
+    margin-top: .58rem;
+    padding: .2rem;
     text-align: center;
-    line-height: 1.8rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
 
 }
+.page6 .concat .textCon2 {
+    float: right;
+    margin-top: 0.1rem;
+    padding: .2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
 
+}
+.page6 .concat .textCon3 {
+    float: right;
+    margin-top: 0.08rem;
+    padding: .2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+
+}
 
 #page6 h2 {
     -webkit-animation: bounceInDown 1s both;
-    animation: bounceInDown 1s both;}
-
-
-
-#page6 .textCon  {
-    -webkit-animation: zoomIn 1s 1s both;
-    animation: zoomIn 1s 1s both;
+    animation: bounceInDown 1s both;
 }
 
+#page6 .concat li:nth-child(1) {
+    -webkit-animation: zoomIn 1s .5s both;
+    animation: zoomIn 1s .5s both;
+}
 
+#page6 .concat li:nth-child(2) {
+    -webkit-animation: zoomIn 1s 1.5s both;
+    animation: zoomIn 1s 1.5s both;
+}
+#page6 .concat li:nth-child(3) {
+    -webkit-animation: zoomIn 1s 2s both;
+    animation: zoomIn 1s 2s both;
+}
+#page6 .concat li:nth-child(4) {
+    -webkit-animation: zoomIn 1s 2.5s both;
+    animation: zoomIn 1s 2.5s both;
+}

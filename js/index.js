@@ -35,7 +35,7 @@ music.addEventListener("click",function(){
 
 /*--LOADING--*/
 var loadingRender = (function () {
-    var ary = ["basketBall.jpg",  "contact.jpg", "course.png", "course1.png", "course2.png", "course3.png", "course4.png", "course5.png", "course6.png","coverBg.jpg", "cube1.png", "cube2.png", "cube3.png", "cube4.png", "cube5.png", "cube6.png", "cubeBg.jpg", "cubeTip.png", "Email.png", "enter.png", "icon.png", "name.png", "myself.jpg", "name.png", "phone.png", "qq.png", "return.png", "study.jpg", "work.jpg","me.jpg","wx.png","live.png"];
+    var ary = ["basketBall.jpg",  "contact.jpg", "course.png", "course1.png", "course2.png", "course3.png", "course4.png", "course5.png", "course6.png","coverBg.jpg", "cube1.png", "cube2.png", "cube3.png", "cube4.png", "cube5.png", "cube6.png", "cubeBg.jpg", "cubeTip.png", "Email.png", "enter.png", "icon.png", "name.png", "name.png", "phone.png", "qq.png", "return.png", "study.jpg", "work.jpg","me.jpg","wx.png","live.png","bg2.jpeg","bg4.png"];
 
     //->获取需要操作的元素
     var $loading = $('#loading'),
